@@ -1,7 +1,8 @@
 #!/bin/bash
 ##### Vars #####
 # IP/hostname of new server
-server="172.16.0.145"
+# TODO Change to argument
+server=$1
 # Username
 user="svradmin"
 # Path to public key
@@ -33,7 +34,3 @@ then
     echo "❌ Unable to run script on server"
     exit
 fi
-
-
-echo "🚿  Cleaning up"
-ssh $user@$server 'rm -rf ~/.ssh'
